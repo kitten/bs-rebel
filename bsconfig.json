@@ -1,0 +1,29 @@
+{
+  "name": "rebel",
+  "version": "0.1.0",
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "refmt": 3,
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": [
+        {
+          "dir": "js",
+          "backend": ["js"]
+        },
+        {
+          "dir": "native",
+          "backend": ["native", "bytecode"]
+        },
+        {
+          "dir": "dev",
+          "type": "dev"
+        }
+
+      ]
+    }
+  ],
+  "bs-dependencies" : [],
+  "bs-dev-dependencies": [],
+  "namespace": false
+}
