@@ -14,6 +14,7 @@ type t('a) = array('a);
 [@bs.send] external copy: t('a) => t('a) = "slice";
 [@bs.send] external slice: (t('a), ~start:int, ~end_:int) => t('a) = "slice";
 [@bs.send] external sliceFrom: (t('a), int) => t('a) = "slice";
+[@bs.send] external append: (t('a), 'a) => t('a) = "concat";
 [@bs.send] external concat: (t('a), t('a)) => t('a) = "concat";
 
 [@bs.send] external map: (t('a), 'a => 'b) => t('b) = "map";

@@ -28,6 +28,9 @@ let slice = (arr: t('a), ~start:int, ~end_:int): t('a) => {
 let sliceFrom = Belt.Array.sliceToEnd;
 let concat = Belt.Array.concat;
 
+let append = (arr: t('a), x: 'a) =>
+  Belt.Array.concat(arr, [|x|]);
+
 let somei = (arr: t('a), f: ('a, int) => bool): bool => {
   let len = size(arr);
   let rec search = (i: int) =>

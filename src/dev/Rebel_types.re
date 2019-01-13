@@ -51,6 +51,7 @@ type t('a) = array('a);
   let copy: t('a) => t('a);
   let slice: (t('a), ~start: int, ~end_: int) => t('a);
   let sliceFrom: (t('a), int) => t('a);
+  let append: (t('a), 'a) => t('a);
   let concat: (t('a), t('a)) => t('a);
   let map: (t('a), 'a => 'b) => t('b);
   let mapi: (t('a), ('a, int) => 'b) => t('b);
