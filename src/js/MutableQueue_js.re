@@ -14,6 +14,8 @@ external toArray: t('a) => array('a) = "%identity";
 [@bs.send] external forEachU: (t('a), (.'a) => unit) => unit = "forEach";
 [@bs.send] external forEach: (t('a), 'a => unit) => unit = "forEach";
 
+let isEmpty = (q: t('a)): bool => size(q) === 0;
+
 let reduceU = (q: t('a), accu: 'b, f: (.'b, 'a) => 'b): 'b =>
   Js.Array.reduce((acc, x) => f(.acc, x), accu, q);
 

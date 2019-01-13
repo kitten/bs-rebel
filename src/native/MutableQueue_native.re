@@ -14,6 +14,7 @@ let map = Belt.MutableQueue.map;
 let forEachU = Belt.MutableQueue.forEachU;
 let forEach = Belt.MutableQueue.forEach;
 
+let isEmpty = Belt.MutableQueue.isEmpty;
 let reduceU = Belt.MutableQueue.reduceU;
 let reduce = Belt.MutableQueue.reduce;
 

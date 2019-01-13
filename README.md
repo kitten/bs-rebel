@@ -54,3 +54,13 @@ completely compile away (but are rather small) are
 It also adds an `addMany` function that does compile away, but
 isn't part of the standard `Belt.MutableQueue` module.
 
+### `MutableStack`
+
+See [Belt.MutableStack](https://bucklescript.github.io/bucklescript/api/Belt.MutableStack.html) for this module's signature.
+
+In JS, this module uses externals to mirror as many functions
+from the `Belt` module as possible. The only functions that don't
+completely compile away (but are rather small) are
+`isEmpty` and `top`.
+
+It does not implement `dynamicPopIterU` and `dynamicPopIter`.

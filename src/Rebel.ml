@@ -15,3 +15,13 @@
 #else
   module MutableQueue = MutableQueue_js
 #end
+
+#if BS_NATIVE then
+  #if BSB_BACKEND = "js" then
+    module MutableStack = MutableStack_native
+  #else
+    module MutableStack = MutableStack_js
+  #end
+#else
+  module MutableStack = MutableStack_js
+#end
