@@ -1,6 +1,6 @@
 {
   "name": "bs-rebel",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A toolkit for collections for bsb-native and bsb aimed at bundle size and performance",
   "main": "lib/js/src/Rebel.js",
   "module": "src/Rebel.js",
