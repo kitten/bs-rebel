@@ -18,10 +18,20 @@
 
 #if BS_NATIVE then
   #if BSB_BACKEND = "js" then
-    module MutableStack = MutableStack_native
+      module MutableStack = MutableStack_native
   #else
     module MutableStack = MutableStack_js
   #end
 #else
   module MutableStack = MutableStack_js
+#end
+
+#if BS_NATIVE then
+  #if BSB_BACKEND = "js" then
+      module Array = Array_native
+  #else
+    module Array = Array_js
+  #end
+#else
+  module Array = Array_js
 #end

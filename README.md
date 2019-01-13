@@ -64,3 +64,29 @@ completely compile away (but are rather small) are
 `isEmpty` and `top`.
 
 It does not implement `dynamicPopIterU` and `dynamicPopIter`.
+
+### `Array`
+
+See [Rebel_types.re](https://github.com/kitten/bs-rebel/blob/master/src/dev/Rebel_types.re) for this module's signature.
+Unfortunately there are no auto-generated docs yet.
+
+This module slightly diverges from `Array`, `Js.Array`, and `Belt.Array`. It tries to match the implementation
+of the JS Array methods as closely as possible. However, there are some in-place modification methods that are
+not implemented in `Belt.Array` and are thus not included in `Rebel.Array`.
+
+Other methods like `filter` and `removeCount` are present though.
+
+The JS externals that don't compile away completely are:
+
+- `set` (as opposed to `setUnsafe` which compiles away)
+- `reverse` (as opposed to `reverseInPlace` which compiles away)
+- `remove` (as opposed to `removeInPlace` which compiles away)
+- `removeCount` (as opposed to `removeCountInPlace` which compiles away)
+- `shuffle`
+- `shuffleInPlace`
+- `make`
+- `set`
+- `includes`
+
+Some JS-only methods are for completeness' sake still included in `Rebel.Array.Js`, but they won't be
+available during native compilation!

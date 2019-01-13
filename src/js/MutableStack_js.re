@@ -6,7 +6,7 @@ module Helpers = {
 
 [@bs.new] external make: unit => t('a) = "Array";
 [@bs.set] external clear: (t('a), [@bs.as 0] _) => unit = "length";
-[@bs.send] external add: (t('a), 'a) => unit = "push";
+[@bs.send] external push: (t('a), 'a) => unit = "push";
 [@bs.send] external pop: t('a) => option('a) = "pop";
 [@bs.send] external copy: t('a) => t('a) = "slice";
 [@bs.get] external size: t('a) => int = "length";
