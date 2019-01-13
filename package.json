@@ -1,7 +1,8 @@
 {
   "name": "bs-rebel",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/js/src/Rebel.js",
+  "module": "src/Rebel.js",
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
