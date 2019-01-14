@@ -8,9 +8,9 @@
 
 #if BS_NATIVE then
   #if BSB_BACKEND = "js" then
-    module MutableQueue = MutableQueue_native
-  #else
     module MutableQueue = MutableQueue_js
+  #else
+    module MutableQueue = MutableQueue_native
   #end
 #else
   module MutableQueue = MutableQueue_js
@@ -18,9 +18,9 @@
 
 #if BS_NATIVE then
   #if BSB_BACKEND = "js" then
-      module MutableStack = MutableStack_native
-  #else
     module MutableStack = MutableStack_js
+  #else
+    module MutableStack = MutableStack_native
   #end
 #else
   module MutableStack = MutableStack_js
@@ -28,9 +28,9 @@
 
 #if BS_NATIVE then
   #if BSB_BACKEND = "js" then
-      module Array = Array_native
-  #else
     module Array = Array_js
+  #else
+    module Array = Array_native
   #end
 #else
   module Array = Array_js
